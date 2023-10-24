@@ -1,11 +1,10 @@
 import { Outlet } from 'react-router-dom'
-
+import MouseFollower from './components/MouseFollower/MouseFollower'
 function App() {
   return (
     <>
-      <main>
-        <Outlet />
-      </main>
+      <MouseFollower />
+      <Outlet />
     </>
   )
 }
