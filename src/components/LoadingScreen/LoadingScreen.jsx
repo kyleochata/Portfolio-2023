@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import style from './LoadingScreen.module.css'
-import logo from '../../../public/MiamiLogo.svg'
+import logo from '../../images/MiamiLogo.svg'
 
 const LoadingScreen = () => {
   const [isLoading, setIsLoading] = useState(true)

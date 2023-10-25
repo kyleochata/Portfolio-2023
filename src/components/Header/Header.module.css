@@ -1,0 +1,13 @@
+.divImage {
+  background-image: url('../../images/MiamiLogo.svg');
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 640px) {
+  .divImage {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,13 +1,11 @@
-import Header from '../../components/Header'
+import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer'
 import style from './HomePage.module.css'
 import LinkContainer from '../../components/LinkContainer'
-import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 
 const HomePage = () => {
   return (
     <>
-      <LoadingScreen />
       <main className={style.homePage}>
         <Header />
         <section>

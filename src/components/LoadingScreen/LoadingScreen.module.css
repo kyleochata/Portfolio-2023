@@ -30,7 +30,7 @@
 .MoveScreenUpTwo {
   left: calc(100vw * 2 / 5);
   background-color: black;
-  background-image: url('../../../public/MiamiLogo.svg');
+  background-image: url('/src/images/MiamiLogo.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
