@@ -1,4 +1,8 @@
 const ResumePage = () => {
-  return <div>ResumePage</div>
+  return (
+    <>
+      <div>Resume Page</div>
+    </>
+  )
 }
 export default ResumePage

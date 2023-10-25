@@ -2,21 +2,12 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import style from './HomePage.module.css'
 import LinkContainer from '../../components/LinkContainer'
-
-import { useEffect, useState } from 'react'
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 
 const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(!isLoading)
-    }, 1500)
-  }, [])
   return (
     <>
-      <div
-        className={isLoading ? `${style.ScreenLoader}` : `${style.MoveScreen}`}
-      ></div>
+      <LoadingScreen />
       <main className={style.homePage}>
         <Header />
         <section>

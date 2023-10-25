@@ -1,0 +1,78 @@
+:root {
+  --highlightColor: #03ffab;
+  --accentColor: #ff3ce6;
+}
+
+.ScreenLoaderFifth,
+.ScreenLoaderFifthLast,
+.MoveScreenUpOne,
+.MoveScreenUpThree {
+  background-color: var(--highlightColor);
+}
+.ScreenLoaderFifth,
+.MoveScreenDownOne,
+.MoveScreenDownTwo,
+.MoveScreenUpOne,
+.MoveScreenUpTwo,
+.MoveScreenUpThree,
+.ScreenLoaderFifthLast {
+  height: 100vh;
+  width: calc(100vw / 5);
+  position: absolute;
+}
+
+.ScreenLoaderFifth:nth-of-type(2),
+.MoveScreenDownOne {
+  left: calc(100vw / 5);
+  background-color: var(--accentColor);
+}
+.ScreenLoaderFifth:nth-of-type(3),
+.MoveScreenUpTwo {
+  left: calc(100vw * 2 / 5);
+  background-color: black;
+  background-image: url('../../../public/MiamiLogo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ScreenLoaderFifth:nth-of-type(4),
+.MoveScreenDownTwo {
+  background-color: var(--accentColor);
+  left: calc(100vw * 3 / 5);
+}
+.ScreenLoaderFifthLast,
+.MoveScreenUpThree {
+  left: calc(100vw * 4 / 5);
+}
+
+.MoveScreenUpOne,
+.MoveScreenUpTwo,
+.MoveScreenUpThree {
+  animation: moveScreenUp 2s forwards;
+}
+
+.MoveScreenDownOne,
+.MoveScreenDownTwo {
+  animation: moveScreenDown 2s forwards;
+}
+
+@keyframes moveScreenUp {
+  0% {
+    bottom: 0;
+    opacity: 0.75;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveScreenDown {
+  0% {
+    top: 0;
+    opacity: 0.75;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
