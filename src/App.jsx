@@ -4,7 +4,6 @@ import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 function App() {
   return (
     <>
-      <LoadingScreen />
       <MouseFollower />
       <Outlet />
     </>

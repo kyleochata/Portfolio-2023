@@ -1,5 +1,130 @@
+:root {
+  --highlightColor: #03ffab;
+  --accentColor: #ff3ce6;
+  --opacityHighlight: rgba(3, 255, 171, 0.5);
+}
+
 .homePage {
   height: 100vh;
   width: 100vw;
   margin: 0;
+  overflow: hidden;
+  contain: strict;
+}
+
+.MiddleLeftText {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.innerText {
+  font-size: 4rem;
+  text-align: center;
+  margin: 3px;
+  font-weight: bold;
+  color: rgba(104, 93, 93, 0.75);
+  text-shadow: 0px 0px 1rem var(--accentColor);
+  -webkit-text-stroke: 2px var(--highlightColor);
+}
+
+.MiddleContainer {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+.MiddleLeft {
+  width: 75%;
+  height: 100%;
+  position: relative;
+}
+
+.HomeImg {
+  height: 100%;
+  width: 100%;
+  background-image: url('/src/images/mountainRange.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: pan-image 15s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes pan-image {
+  0% {
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+
+  20.0001% {
+    /* -- View 2 -- */
+    background-position: 60% 85%;
+    background-size: 250%;
+  }
+
+  40% {
+    background-position: 49% 81%;
+    background-size: 250%;
+  }
+
+  40.0001% {
+    /* -- View 3 -- */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+
+  60.0001% {
+    /* -- View 4 -- */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+
+  80% {
+    background-position: 15% 4%;
+    background-size: 300%;
+  }
+
+  80.0001% {
+    /* -- View 5 -- */
+    background-position: 30% 10%;
+    background-size: 200%;
+  }
+
+  100% {
+    background-position: 52% 64%;
+    background-size: 200%;
+  }
+}
+
+.ImgContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.MiddleRight {
+  width: 25%;
+  text-align: center;
+}
+
+.ListContainerRight {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

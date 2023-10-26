@@ -1,7 +1,14 @@
+import Header from '../../components/Header/Header'
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
+
 const ResumePage = () => {
   return (
     <>
-      <div>Resume Page</div>
+      <LoadingScreen />
+      <div>
+        <Header />
+        Resume Page
+      </div>
     </>
   )
 }

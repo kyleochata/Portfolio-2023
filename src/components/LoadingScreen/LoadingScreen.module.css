@@ -19,6 +19,7 @@
   height: 100vh;
   width: calc(100vw / 5);
   position: absolute;
+  z-index: 1;
 }
 
 .ScreenLoaderFifth:nth-of-type(2),

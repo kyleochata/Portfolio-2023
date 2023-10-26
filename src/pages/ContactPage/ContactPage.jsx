@@ -1,7 +1,14 @@
+import Header from '../../components/Header/Header'
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
+
 const ContactPage = () => {
   return (
     <>
-      <div>Contact Page</div>
+      <LoadingScreen />
+      <div>
+        <Header />
+        Contact Page
+      </div>
     </>
   )
 }

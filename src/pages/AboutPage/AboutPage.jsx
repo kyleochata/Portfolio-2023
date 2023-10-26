@@ -1,7 +1,14 @@
+import Header from '../../components/Header/Header'
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
+
 const AboutPage = () => {
   return (
     <>
-      <div>About Page</div>
+      <LoadingScreen />
+      <div>
+        <Header />
+        About Page
+      </div>
     </>
   )
 }
