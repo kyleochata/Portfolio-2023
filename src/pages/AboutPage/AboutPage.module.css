@@ -21,15 +21,25 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  border: solid 1px white;
+  margin-top: 10%;
+  margin-left: 5%;
 }
 
 .ProfileImgContainer {
   height: 20%;
   width: 50%;
   border-radius: 50%;
-  background-image: url('../../images/profile-pic.png');
+  /* background-image: url('../../images/profile-pic.png');
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  transform: translate(0, -50%);
+}
+.ProfileImg {
+  height: 75%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: scale-down;
 }
 
 .ProfileCardText {
@@ -37,4 +47,66 @@
   display: flex;
   align-items: center;
   text-align: center;
+  transform: translate(0, -15%);
+}
+.AboutRight {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 10px;
+  padding: 5px;
+  position: relative;
+}
+
+.AboutRBg {
+  background-image: url('../../images/MiamiLogo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  height: 80vh;
+  width: 80vw;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.cardHalf {
+  /* width: 45%; */
+
+  /* margin: 5px; */
+  background-color: transparent;
+  /* height: 10%; */
+  opacity: 1;
+  padding: 5px;
+  /* height: 100%; */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.cardHalfContent {
+  border: solid 1px white;
+}
+
+.cardOneFourth {
+  width: 23%;
+  border: solid 1px white;
+}
+
+.cardThreeFourth {
+  width: 73%;
+  margin: 0 2%;
+  border: solid 1px white;
+}
+
+.cardRowHalf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  /* contain: strict; */
 }
