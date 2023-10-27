@@ -32,116 +32,19 @@ const AboutPage = () => {
           </section>
           <section className={style.AboutRight}>
             <div className={style.AboutRBg}></div>
-            <div className={style.cardRowHalf}>
-              <div className={`${style.cardHalf} sm:w-full md:w-1/2`}>
-                <div className={style.cardHalfContent}>
-                  <img></img>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    officiis eius reprehenderit suscipit neque hic explicabo
-                    sunt. Impedit consequuntur pariatur quas quasi nostrum cum
-                    tempora, quam, error molestias unde accusamus?
-                  </p>
-                  <div>
-                    <div>
-                      <button>
-                        <a>Live Site</a>
-                      </button>
-                    </div>
-                    <div>
-                      <button>
-                        <a>GitHub Repo</a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={`${style.cardHalf} sm:w-full md:w-1/2`}>
-                <div className={style.cardHalfContent}>
-                  <img></img>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    officiis eius reprehenderit suscipit neque hic explicabo
-                    sunt. Impedit consequuntur pariatur quas quasi nostrum cum
-                    tempora, quam, error molestias unde accusamus?
-                  </p>
-                  <div>
-                    <div>
-                      <button>
-                        <a>Live Site</a>
-                      </button>
-                    </div>
-                    <div>
-                      <button>
-                        <a>GitHub Repo</a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={style.cardThreeFourth}>
-              <img></img>
+            <section className={style.AboutCard} data="1">
+              <h3>I love to learn</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                officiis eius reprehenderit suscipit neque hic explicabo sunt.
-                Impedit consequuntur pariatur quas quasi nostrum cum tempora,
-                quam, error molestias unde accusamus?
+                Web development and technology has given me the adventure of
+                constantly learning something new. Each time I learn something
+                new and implement it into one of my projects, it makes me
+                hungrier to learn more!
               </p>
-              <div>
-                <div>
-                  <button>
-                    <a>Live Site</a>
-                  </button>
-                </div>
-                <div>
-                  <button>
-                    <a>GitHub Repo</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className={style.cardOneFourth}>
-              <img></img>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                officiis eius reprehenderit suscipit neque hic explicabo sunt.
-                Impedit consequuntur pariatur quas quasi nostrum cum tempora,
-                quam, error molestias unde accusamus?
-              </p>
-              <div>
-                <div>
-                  <button>
-                    <a>Live Site</a>
-                  </button>
-                </div>
-                <div>
-                  <button>
-                    <a>GitHub Repo</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className={style.cardFull}>
-              <img></img>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                officiis eius reprehenderit suscipit neque hic explicabo sunt.
-                Impedit consequuntur pariatur quas quasi nostrum cum tempora,
-                quam, error molestias unde accusamus?
-              </p>
-              <div>
-                <div>
-                  <button>
-                    <a>Live Site</a>
-                  </button>
-                </div>
-                <div>
-                  <button>
-                    <a>GitHub Repo</a>
-                  </button>
-                </div>
-              </div>
+            </section>
+            <div className={style.CardBtnContainer}>
+              <button className={style.CardBtn}> &#60; </button>
+
+              <button className={style.CardBtn}> &#62; </button>
             </div>
           </section>
         </section>
