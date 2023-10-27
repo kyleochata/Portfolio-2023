@@ -57,36 +57,66 @@ const HomePage = () => {
             </div>
           </section>
           <section className={style.MiddleRight}>
-            <h2>Explore Kyle</h2>
+            <h2 className={style.MiddleRightTitle}>Hover to learn more</h2>
             <ul className={style.ListContainerRight}>
-              <li onMouseEnter={hoverList}>
-                <div> About Me</div>
+              <li>
+                <div
+                  className={
+                    hover === 'About Me' ? style.listItemActive : style.listItem
+                  }
+                  onMouseEnter={hoverList}
+                >
+                  {' '}
+                  About Me
+                </div>
                 {hover === 'About Me' && (
-                  <button>
+                  <button className={style.ButtonHide}>
                     <Link to="/about">Click to learn more</Link>
                   </button>
                 )}
               </li>
-              <li onMouseEnter={hoverList}>
-                <div> Projects</div>
+              <li>
+                <div
+                  className={
+                    hover === 'Projects' ? style.listItemActive : style.listItem
+                  }
+                  onMouseEnter={hoverList}
+                >
+                  {' '}
+                  Projects
+                </div>
                 {hover === 'Projects' && (
-                  <button>
+                  <button className={style.ButtonHide}>
                     <Link to="/projects">Discover my Projects</Link>
                   </button>
                 )}
               </li>
-              <li onMouseEnter={hoverList}>
-                <div>Contact</div>
+              <li>
+                <div
+                  className={
+                    hover === 'Contact' ? style.listItemActive : style.listItem
+                  }
+                  onMouseEnter={hoverList}
+                >
+                  Contact
+                </div>
                 {hover === 'Contact' && (
-                  <button>
-                    <Link to="/contact">Go to Contact Page</Link>
+                  <button className={style.ButtonHide}>
+                    <Link to="/contact">Click to get in touch</Link>
                   </button>
                 )}
               </li>
-              <li onMouseEnter={hoverList}>
-                <div>Resume</div>
+              <li>
+                <div
+                  className={
+                    hover === 'Resume' ? style.listItemActive : style.listItem
+                  }
+                  onMouseEnter={hoverList}
+                >
+                  Resume
+                </div>
                 {hover === 'Resume' && (
-                  <button>
+                  <button className={style.ButtonHide}>
                     <Link to="/resume">View my Resume</Link>
                   </button>
                 )}

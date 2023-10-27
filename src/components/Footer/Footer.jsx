@@ -8,7 +8,7 @@ const Footer = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setGrow(!grow)
+      setGrow(true)
     }, 1500)
   }, [])
 
@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className={styles.FooterContainer}>
       <div className={styles.IconContainer}>
         <a
-          href="https://www.linkedin.com/kyleochata"
+          href="https://www.linkedin.com/in/kyle-etrata"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.imageAnchor}
@@ -28,7 +28,7 @@ const Footer = () => {
           />
         </a>
         <a
-          href="#"
+          href="https://github.com/kyleochata"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.imageAnchor}

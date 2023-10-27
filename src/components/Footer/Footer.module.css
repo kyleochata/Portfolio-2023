@@ -29,6 +29,13 @@
 .imageAnimation {
   height: 100%;
   animation: growIn 1.5s forwards;
+  border-radius: 50%;
+}
+.imageAnchor:hover {
+  transform: scale(1.2);
+}
+.imageAnchor:hover > .imageAnimation {
+  transform: scale(1.2);
 }
 
 @keyframes growIn {
@@ -37,7 +44,8 @@
     opacity: 0;
   }
   100% {
-    scale: 1;
+    scale: 0.75;
     opacity: 1;
+    box-shadow: 5px 5px 0.5rem var(--accentColor);
   }
 }
