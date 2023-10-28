@@ -117,9 +117,14 @@ const ProjectsPage = () => {
               </>
             )}
             {firstLoad && (
-              <>
-                <h1>Check out my projects!</h1>
-              </>
+              <div className={style.LoadMainCard}>
+                <h1 className={style.ProjectMainTitle}>
+                  Check out my projects!
+                </h1>
+                <p className={style.LoadingInstruction}>
+                  Click on a card to learn more about that project
+                </p>
+              </div>
             )}
           </div>
         </section>

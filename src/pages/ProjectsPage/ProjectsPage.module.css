@@ -1,3 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap'); */
+@font-face {
+  font-family: 'LUMANEON';
+  src: url('../../Fonts/LUMANEON.woff2') format('woff2'),
+    url('../../Fonts/LUMANEON-SVG.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
 :root {
   --highlightColor: #03ffab;
   --accentColor: #ff3ce6;
@@ -43,20 +52,23 @@
 
 .ProjectCards > h3 {
   z-index: 1;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2.5vw, 2.75rem);
   font-weight: bolder;
   text-align: center;
   color: var(--opacityHighlight);
-  text-shadow: 0px 0px 1rem var(--accentColor);
+  /* text-shadow: 0px 0px 1rem var(--accentColor); */
   transition: all 0.25s;
+  font-family: 'LUMANEON', sans-serif;
+  /* background-color: black; */
 }
 .ProjectCards:hover > h3 {
-  color: #ff3ce6;
-  text-shadow: 0px 0px 1rem white;
+  /* color: #ff3ce6; */
+  color: var(--highlightColor);
+  text-shadow: 0px 0px 1rem var(--highlightColor);
   opacity: 1;
 }
 .ProjectCards:hover > div {
-  filter: none;
+  filter: grayscale(50%);
   transition: all 0.25s;
 }
 .OutercardImg {
@@ -96,6 +108,10 @@
   background-position: center;
   filter: grayscale(100%);
 }
+.img2 ~ h3,
+.img5 ~ h3 {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
 .ProjectCards:nth-child(3) {
   grid-area: c;
 }
@@ -116,10 +132,6 @@
 }
 .ProjectCards:nth-child(5) {
   grid-area: i;
-}
-.ProjectCards:nth-child(5):hover > div {
-  background-position: center;
-  transition: all 1s;
 }
 .img5 {
   background-image: url('../../images/BlogSite.png');
@@ -168,14 +180,27 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 .ProjectMainTitle {
-  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-size: clamp(3rem, 4vw, 4rem);
   font-weight: bolder;
   text-align: center;
-  color: var(--accentColor);
-  text-shadow: 0px 0px 1rem var(--highlightColor);
+  text-shadow: 0px 0px 1.5rem var(--highlightColor);
   transition: all 0.25s;
+  font-family: 'LUMANEON', sans-serif;
+}
+.LoadingInstruction {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0px 0px 1.5rem var(--accentColor);
+  transition: all 0.25s;
+  font-family: 'LUMANEON', sans-serif;
+}
+.LoadMainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
