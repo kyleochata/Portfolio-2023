@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer'
 import style from './HomePage.module.css'
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 import image from '../../images/HomeImage.png'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const HomePage = () => {
@@ -57,7 +57,7 @@ const HomePage = () => {
             </div>
           </section>
           <section className={style.MiddleRight}>
-            <h2 className={style.MiddleRightTitle}>Hover to learn more</h2>
+            <h2 className={style.MiddleRightTitle}>Choose A Topic</h2>
             <ul className={style.ListContainerRight}>
               <li>
                 <div

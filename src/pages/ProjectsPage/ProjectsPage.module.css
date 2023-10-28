@@ -1,0 +1,150 @@
+:root {
+  --highlightColor: #03ffab;
+  --accentColor: #ff3ce6;
+  --opacityHighlight: rgba(3, 255, 171, 0.5);
+}
+
+.ProjectMain {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  contain: strict;
+}
+
+.ProjectSection {
+  height: 78%;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    'a b b c'
+    'd ⭐ ⭐ e'
+    'd ⭐ ⭐ e'
+    'h i i j';
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 18% 30% 30% 18%;
+  padding: 1rem;
+}
+
+.ProjectSection > div {
+  border: solid 1px white;
+}
+.ProjectCards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.25s;
+}
+/* .ProjectCards:hover {
+  transform: scale(1.1);
+} */
+.ProjectCards > h3 {
+  z-index: 1;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: bolder;
+  text-align: center;
+  /* color: rgba(121, 119, 119, 0.85); */
+  color: var(--opacityHighlight);
+  text-shadow: 0px 0px 1rem var(--accentColor);
+  transition: all 0.25s;
+}
+.ProjectCards:hover > h3 {
+  color: #ff3ce6;
+  text-shadow: 0px 0px 1rem white;
+  opacity: 1;
+}
+.ProjectCards:hover > div {
+  filter: none;
+  transition: all 0.25s;
+}
+.OutercardImg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.ProjectCards:nth-child(1) {
+  grid-area: a;
+}
+.ProjectCards:hover {
+  transform: scale(1.1);
+}
+.img1 {
+  background-image: url('../../images/JATE.png');
+  filter: grayscale(100%);
+}
+
+.ProjectCards:nth-child(2) {
+  grid-area: b;
+}
+.ProjectCards:nth-child(2):hover,
+.ProjectCards:nth-child(7):hover,
+.ProjectCardsMain:hover {
+  transform: scale(1.03);
+}
+.img2 {
+  background-image: url('../../images/HammerLogin.png');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.ProjectCards:nth-child(3) {
+  grid-area: c;
+}
+.img3 {
+  background-image: url('../../images/slideshow.png');
+  opacity: 0.75;
+  filter: grayscale(100%);
+}
+.ProjectCards:nth-child(4) {
+  grid-area: d;
+  background-image: url('../../images/MiamiLogo.svg');
+  opacity: 0.75;
+}
+.ProjectCards:nth-child(5) {
+  grid-area: e;
+  background-image: url('../../images/MiamiLogo.svg');
+  opacity: 0.75;
+}
+
+.ProjectCards:nth-child(6) {
+  grid-area: h;
+}
+.img4 {
+  background-image: url('../../images/brainbalancecompanion.png');
+  background-size: cover;
+  background-position: center top;
+  filter: grayscale(100%);
+}
+.ProjectCards:nth-child(7) {
+  grid-area: i;
+}
+.img5 {
+  background-image: url('../../images/BlogSite.png');
+  background-size: 100%;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.ProjectCards:nth-child(8) {
+  grid-area: j;
+}
+.img6 {
+  background-image: url('../../images/weatherApp.png');
+  filter: grayscale(100%);
+}
+
+.ProjectCardsMain {
+  grid-area: ⭐;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

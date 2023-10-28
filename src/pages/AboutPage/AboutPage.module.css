@@ -73,7 +73,7 @@
   pointer-events: none;
 }
 
-.AboutCard {
+.AboutCardComeInR {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +83,70 @@
   border: 1px solid white;
   padding: 10px;
   border-radius: 5px;
+  animation: comeInR 1.5s ease-in forwards;
+  animation-delay: 1s;
+  z-index: 1;
 }
+@keyframes comeInR {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.AboutCardComeInL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  background: black;
+  opacity: 1;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  animation: comeInL 1.5s ease-in forwards;
+  animation-delay: 1s;
+  z-index: 1;
+}
+@keyframes comeInR {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.AboutCardStayL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  background: black;
+  opacity: 1;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  animation: stayL 1s ease-in forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes stayL {
+  0% {
+    left: 50%;
+    z-index: 0;
+  }
+  100% {
+    left: -1000%;
+    opacity: 0;
+    width: 0;
+  }
+}
+
 .CardBtnContainer {
   display: flex;
   width: 10%;
