@@ -24,6 +24,7 @@
   grid-template-rows: repeat(4, 25%);
   grid-template-columns: 18% 30% 30% 18%;
   padding: 1rem;
+  margin-top: 10px;
 }
 
 .ProjectSection > div {
@@ -39,15 +40,12 @@
   background-repeat: no-repeat;
   transition: all 0.25s;
 }
-/* .ProjectCards:hover {
-  transform: scale(1.1);
-} */
+
 .ProjectCards > h3 {
   z-index: 1;
   font-size: clamp(1rem, 2vw, 2rem);
   font-weight: bolder;
   text-align: center;
-  /* color: rgba(121, 119, 119, 0.85); */
   color: var(--opacityHighlight);
   text-shadow: 0px 0px 1rem var(--accentColor);
   transition: all 0.25s;
@@ -70,13 +68,14 @@
   width: 100%;
   opacity: 0.75;
   z-index: 0;
+  pointer-events: none;
 }
 
 .ProjectCards:nth-child(1) {
   grid-area: a;
 }
 .ProjectCards:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 .img1 {
   background-image: url('../../images/JATE.png');
@@ -87,9 +86,9 @@
   grid-area: b;
 }
 .ProjectCards:nth-child(2):hover,
-.ProjectCards:nth-child(7):hover,
+.ProjectCards:nth-child(5):hover,
 .ProjectCardsMain:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 .img2 {
   background-image: url('../../images/HammerLogin.png');
@@ -105,18 +104,8 @@
   opacity: 0.75;
   filter: grayscale(100%);
 }
-.ProjectCards:nth-child(4) {
-  grid-area: d;
-  background-image: url('../../images/MiamiLogo.svg');
-  opacity: 0.75;
-}
-.ProjectCards:nth-child(5) {
-  grid-area: e;
-  background-image: url('../../images/MiamiLogo.svg');
-  opacity: 0.75;
-}
 
-.ProjectCards:nth-child(6) {
+.ProjectCards:nth-child(4) {
   grid-area: h;
 }
 .img4 {
@@ -125,26 +114,68 @@
   background-position: center top;
   filter: grayscale(100%);
 }
-.ProjectCards:nth-child(7) {
+.ProjectCards:nth-child(5) {
   grid-area: i;
+}
+.ProjectCards:nth-child(5):hover > div {
+  background-position: center;
+  transition: all 1s;
 }
 .img5 {
   background-image: url('../../images/BlogSite.png');
   background-size: 100%;
-  background-position: center;
+  background-position: top center;
   filter: grayscale(100%);
 }
-.ProjectCards:nth-child(8) {
+.ProjectCards:nth-child(6) {
   grid-area: j;
 }
 .img6 {
   background-image: url('../../images/weatherApp.png');
   filter: grayscale(100%);
 }
+.ProjectCards:nth-child(7) {
+  grid-area: d;
+  background-image: url('../../images/MiamiLogo.svg');
+  opacity: 0.75;
+}
+.ProjectCards:nth-child(8) {
+  grid-area: e;
+  background-image: url('../../images/MiamiLogo.svg');
+  opacity: 0.75;
+}
 
 .ProjectCardsMain {
   grid-area: ⭐;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  padding: 0;
+}
+
+.ProjectImgContainer {
+  width: 50%;
+  padding: 10px;
+  height: 100%;
+}
+.ProjectImg {
+  object-fit: cover;
+  object-position: top left;
+  height: 100%;
+  width: 100%;
+}
+.MainCardRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+}
+.ProjectMainTitle {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-weight: bolder;
+  text-align: center;
+  color: var(--accentColor);
+  text-shadow: 0px 0px 1rem var(--highlightColor);
+  transition: all 0.25s;
 }

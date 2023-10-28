@@ -3,6 +3,15 @@ import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 import style from './ProjectsPage.module.css'
 import Footer from '../../components/Footer/Footer'
 import { useState } from 'react'
+import { projectData } from '../../ProjectData'
+import Jate from '../../images/JATE.png'
+import ItHelpDesk from '../../images/HammerLogin.png'
+import ItHelpDesk2 from '../../images/ticket1.png'
+import Slideshow from '../../images/slideshow.png'
+import BCompanion from '../../images/brainbalancecompanion.png'
+import Blog from '../../images/BlogSite.png'
+import Weather from '../../images/weatherApp.png'
+import MainProjectCard from '../../components/MainProjectCard/MainProjectCard'
 
 const ProjectsPage = () => {
   const [project, setProject] = useState({
@@ -12,7 +21,67 @@ const ProjectsPage = () => {
     liveSite: '',
     githubRepo: '',
   })
+
   const [firstLoad, setFirstLoad] = useState(true)
+  const [currentMain, setCurrentMain] = useState('')
+
+  const findImage = () => {
+    switch (currentMain) {
+      case 'card1':
+        return `${Jate}`
+      case 'card2':
+        return `${ItHelpDesk2}`
+      case 'card3':
+        return `${Slideshow}`
+      case 'card4':
+        return `${BCompanion}`
+      case 'card5':
+        return `${Blog}`
+      case 'card6':
+        return `${Weather}`
+      default:
+        return ''
+    }
+  }
+
+  const handleCardClick = ({ target }) => {
+    const cardNumber = target.getAttribute('data')
+    if (!cardNumber || cardNumber === currentMain) {
+      return
+    }
+    if (firstLoad) {
+      setFirstLoad(false)
+    }
+    switch (cardNumber) {
+      case 'card1':
+        setProject(projectData[0])
+        setCurrentMain('card1')
+        break
+      case 'card2':
+        setProject(projectData[1])
+        setCurrentMain('card2')
+        break
+      case 'card3':
+        setProject(projectData[2])
+        setCurrentMain('card3')
+        break
+      case 'card4':
+        setProject(projectData[3])
+        setCurrentMain('card4')
+        break
+      case 'card5':
+        setProject(projectData[4])
+        setCurrentMain('card5')
+        break
+      case 'card6':
+        setProject(projectData[5])
+        setCurrentMain('card6')
+        break
+      default:
+        setProject('')
+        break
+    }
+  }
 
   return (
     <>
@@ -20,46 +89,31 @@ const ProjectsPage = () => {
       <main className={style.ProjectMain}>
         <Header />
         <section className={style.ProjectSection}>
-          <div className={style.ProjectCards}>
-            <div className={`${style.OutercardImg} ${style.img1}`}></div>
-            <h3>Just Another Text Editor</h3>
-          </div>
-          <div className={style.ProjectCards}>
-            <div className={`${style.OutercardImg} ${style.img2}`}></div>
-            <h3>I.T. Help Desk</h3>
-          </div>
-          <div className={style.ProjectCards}>
-            <div className={`${style.OutercardImg} ${style.img3}`}></div>
-            <h3>Slideshow</h3>
-          </div>
+          {projectData.map((project) => {
+            return (
+              <div
+                className={style.ProjectCards}
+                onClick={handleCardClick}
+                data={project.cardNumber}
+              >
+                <div
+                  className={`${style.OutercardImg} ${style[project.img]}`}
+                  data={project.cardNumber}
+                ></div>
+                <h3 data={project.cardNumber}>{project.title}</h3>
+              </div>
+            )
+          })}
           <div className={style.ProjectCards}></div>
           <div className={style.ProjectCards}></div>
-          <div className={style.ProjectCards}>
-            <div className={`${style.OutercardImg} ${style.img4}`}></div>
-            <h3>BB Companion</h3>
-          </div>
-          <div className={style.ProjectCards}>
-            <div className={`${style.OutercardImg} ${style.img5}`}></div>
-            <h3>Blog Site</h3>
-          </div>
-          <div className={style.ProjectCards}>
-            <div className={`${style.OutercardImg} ${style.img6}`}></div>
-            <h3>Weather Dashboard</h3>
-          </div>
           <div className={style.ProjectCardsMain}>
             {!firstLoad && (
               <>
-                <div className={style.ProjectMainImg}>Image</div>
-                <div className={style.ProjectMainTitle}>Title</div>
-                <div className={style.ProjectMainDescription}>Description</div>
-                <div className={style.ProjectMainBtn}>
-                  <button className={style.ProjectCardMainBtn}>
-                    Live Site
-                  </button>
-                  <button className={style.ProjectCardMainBtn}>
-                    Github Repository
-                  </button>
-                </div>
+                <MainProjectCard
+                  project={project}
+                  findImage={findImage}
+                  style={style}
+                />
               </>
             )}
             {firstLoad && (
@@ -74,4 +128,5 @@ const ProjectsPage = () => {
     </>
   )
 }
+
 export default ProjectsPage
