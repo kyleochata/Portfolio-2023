@@ -6,11 +6,6 @@ const NavBar = ({ style }) => {
   const [showMenu, setShowMenu] = useState(false)
   const [largeScreen, setLargeScreen] = useState(window.innerWidth > 600)
 
-  const handleDownload = () => {
-    const pdfPath = '../../../public/resume.pdf'
-    window.open(pdfPath, '_blank')
-  }
-
   const toggleMenu = () => {
     setShowMenu(!showMenu)
   }
@@ -57,7 +52,11 @@ const NavBar = ({ style }) => {
             </Link>
           </div>
           <div className={style.btnHolder}>
-            <button onClick={handleDownload}>Resume</button>
+            <button>
+              <a href={KeResume} download="Kyle Etrata Resume">
+                Resume
+              </a>
+            </button>
           </div>
         </>
       )}
