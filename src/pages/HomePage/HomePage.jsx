@@ -15,9 +15,7 @@ const HomePage = () => {
     }
     switch (target.innerText) {
       case 'About Me':
-        setContent(
-          `I'm a software developer with a passion for building beautiful, functional websites.`
-        )
+        setContent(`Learn more about me and my passion for learning`)
         setHover('About Me')
         break
       case 'Projects':
@@ -106,7 +104,7 @@ const HomePage = () => {
                   </button>
                 )}
               </li>
-              <li>
+              {/* <li>
                 <div
                   className={
                     hover === 'Resume' ? style.listItemActive : style.listItem
@@ -120,7 +118,7 @@ const HomePage = () => {
                     <Link to="/resume">View my Resume</Link>
                   </button>
                 )}
-              </li>
+              </li> */}
             </ul>
           </section>
         </div>

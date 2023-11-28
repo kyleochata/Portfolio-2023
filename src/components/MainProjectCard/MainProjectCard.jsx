@@ -21,7 +21,7 @@ const MainProjectCard = ({ project, findImage, style }) => {
           </div>
           <div className={style.ProjectCardMainBtn}>
             <a href={project.githubRepo} target="_blank">
-              Github Repository
+              Github
             </a>
           </div>
         </div>

@@ -16,10 +16,10 @@
 .MoveScreenUpTwo,
 .MoveScreenUpThree,
 .ScreenLoaderFifthLast {
-  height: 100vh;
+  height: 101vh;
   width: calc(100vw / 5);
   position: absolute;
-  z-index: 1;
+  z-index: 10;
 }
 
 .ScreenLoaderFifth:nth-of-type(2),
