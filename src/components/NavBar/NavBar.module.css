@@ -1,0 +1,5 @@
+.NavResumeBtn {
+  border: solid 1px var(--highlightColor);
+  padding: 5px;
+  border-radius: 5px;
+}
