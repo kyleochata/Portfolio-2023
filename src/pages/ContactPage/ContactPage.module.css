@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'LUMANEON';
+  src: url('../../Fonts/LUMANEON.woff2') format('woff2'),
+    url('../../Fonts/LUMANEON-SVG.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+:root {
+  --highlightColor: #03ffab;
+  --accentColor: #ff3ce6;
+  --opacityHighlight: rgba(3, 255, 171, 0.5);
+}
+.ContactMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 1rem;
+}
+.ContactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  padding: 1rem;
+  /* border: solid 1px #464145; */
+  /* background-color: red; */
+  /* margin-top: 1rem; */
+}
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  /* border: solid 1px #654b60; */
+  /* background-color: blue; */
+}
+.ContactTitle {
+  font-size: clamp(2.75rem, 4vw, 4rem);
+  font-weight: 700;
+  color: var(--highlightColor);
+  text-shadow: 0px 0px 1rem var(--highlightColor);
+  font-family: 'LUMANEON', sans-serif;
+  letter-spacing: 0.2rem;
+}
+.ContactText {
+  font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+  font-weight: 700;
+  color: #ecfff9;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.2rem;
+  padding: 5px;
+}
+.CCContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 1rem;
+  border-bottom: 1px solid #342d32;
+  gap: 1rem;
+  padding: 1rem;
+}
+.CCContainer:first-of-type {
+  border-top: 1px solid #342d32;
+}
+.CCContainer > div:first-of-type {
+  text-align: start;
+  width: 33%;
+}
+.CLContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  border-bottom: 1px solid #342d32;
+  padding: 1rem;
+}
+.CLContainer > div:first-of-type {
+  text-align: start;
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* @media (max-width: 600px) {
+  .CLContainer > div:nth-of-type(2) {
+    text-align: end;
+  } */
+
+.CLContainer > div:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+/* .CCContainer > div:first-of-type,
+.CLContainer > div:first-of-type { */
+.CCContainer > div,
+.CLContainer > div {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-weight: 700;
+  color: #ecfff9;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.2rem;
+  padding: 5px;
+}
+.CLContainer > div:first-of-type {
+  margin-bottom: 5px;
+}
