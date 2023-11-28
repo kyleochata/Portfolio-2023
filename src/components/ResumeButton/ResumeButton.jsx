@@ -1,16 +1,10 @@
+import KeResume from '/resume.pdf'
+
 const ResumeButton = ({ style }) => {
-  const handleDownload = () => {
-    // Replace 'resume.pdf' with the actual path to your PDF file
-    const pdfPath = '/resume.pdf'
-
-    // Trigger the download
-    window.open(pdfPath, '_blank')
-  }
-
   return (
-    <button onClick={handleDownload} className={style.rmvBtn}>
-      Download My Resume!
-    </button>
+    <a href={KeResume} download="Kyle Etrata Resume">
+      <button className={style.rmvBtn}>Download My Resume!</button>
+    </a>
   )
 }
 export default ResumeButton

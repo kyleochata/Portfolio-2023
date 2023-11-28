@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import KeResume from '/resume.pdf'
 
 const NavBar = ({ style }) => {
   const [showMenu, setShowMenu] = useState(false)
@@ -88,7 +89,9 @@ const NavBar = ({ style }) => {
             </Link>
           </div>
           <div className={style.btnHolder}>
-            <button onClick={handleDownload}>Resume</button>
+            <a href={KeResume} download="Kyle Etrata Resume">
+              <button>Resume</button>
+            </a>
           </div>
         </div>
       )}
