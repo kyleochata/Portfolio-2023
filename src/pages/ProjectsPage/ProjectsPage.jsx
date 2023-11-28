@@ -5,9 +5,8 @@ import Footer from '../../components/Footer/Footer'
 import { useState } from 'react'
 import { projectData } from '../../ProjectData'
 import Jate from '../../images/JATE.png'
-import ItHelpDesk from '../../images/HammerLogin.png'
+import WillDo from '../../images/willdo.png'
 import ItHelpDesk2 from '../../images/ticket1.png'
-import Slideshow from '../../images/slideshow.png'
 import BCompanion from '../../images/brainbalancecompanion.png'
 import Blog from '../../images/BlogSite.png'
 import Weather from '../../images/weatherApp.png'
@@ -30,9 +29,9 @@ const ProjectsPage = () => {
       case 'card1':
         return `${Jate}`
       case 'card2':
-        return `${ItHelpDesk2}`
+        return `${WillDo}`
       case 'card3':
-        return `${Slideshow}`
+        return `${ItHelpDesk2}`
       case 'card4':
         return `${BCompanion}`
       case 'card5':
@@ -88,47 +87,49 @@ const ProjectsPage = () => {
       <LoadingScreen />
       <main className={style.ProjectMain}>
         <Header />
-        <section className={style.ProjectSection}>
-          {projectData.map((project) => {
-            return (
-              <div
-                className={style.ProjectCards}
-                onClick={handleCardClick}
-                data={project.cardNumber}
-              >
+        <div className={style.ProjectContainer}>
+          <section className={style.ProjectSection}>
+            {projectData.map((project) => {
+              return (
                 <div
-                  className={`${style.OutercardImg} ${style[project.img]}`}
+                  className={style.ProjectCards}
+                  onClick={handleCardClick}
                   data={project.cardNumber}
-                ></div>
-                <h3 data={project.cardNumber}>{project.title}</h3>
-              </div>
-            )
-          })}
-          <div className={style.ProjectCards}></div>
-          <div className={style.ProjectCards}></div>
-          <div className={style.ProjectCardsMain}>
-            {!firstLoad && (
-              <>
-                <MainProjectCard
-                  project={project}
-                  findImage={findImage}
-                  style={style}
-                />
-              </>
-            )}
-            {firstLoad && (
-              <div className={style.LoadMainCard}>
-                <h1 className={style.ProjectMainTitle}>
-                  Check out my projects!
-                </h1>
-                <p className={style.LoadingInstruction}>
-                  Click on a card to learn more about that project
-                </p>
-              </div>
-            )}
-          </div>
-        </section>
-        <Footer />
+                >
+                  <div
+                    className={`${style.OutercardImg} ${style[project.img]}`}
+                    data={project.cardNumber}
+                  ></div>
+                  <h3 data={project.cardNumber}>{project.title}</h3>
+                </div>
+              )
+            })}
+            <div className={style.ProjectCards}></div>
+            <div className={style.ProjectCards}></div>
+            <div className={style.ProjectCardsMain}>
+              {!firstLoad && (
+                <>
+                  <MainProjectCard
+                    project={project}
+                    findImage={findImage}
+                    style={style}
+                  />
+                </>
+              )}
+              {firstLoad && (
+                <div className={style.LoadMainCard}>
+                  <h1 className={style.ProjectMainTitle}>
+                    Check out my projects!
+                  </h1>
+                  <p className={style.LoadingInstruction}>
+                    Click on a card to learn more about that project
+                  </p>
+                </div>
+              )}
+            </div>
+          </section>
+        </div>
+        {/* <Footer /> */}
       </main>
     </>
   )

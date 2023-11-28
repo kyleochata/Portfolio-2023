@@ -14,16 +14,16 @@ const MainProjectCard = ({ project, findImage, style }) => {
           {project.description}
         </div>
         <div className={style.ProjectMainBtn}>
-          <button className={style.ProjectCardMainBtn}>
+          <div className={style.ProjectCardMainBtn}>
             <a href={project.liveSite} target="_blank">
               Live Site
             </a>
-          </button>
-          <button className={style.ProjectCardMainBtn}>
+          </div>
+          <div className={style.ProjectCardMainBtn}>
             <a href={project.githubRepo} target="_blank">
               Github Repository
             </a>
-          </button>
+          </div>
         </div>
       </div>
     </>

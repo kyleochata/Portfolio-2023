@@ -10,16 +10,16 @@ export const projectData = [
     img: 'img1'
   },
   {
-    title: 'IT Help Desk',
-    description: 'Full stack application that allows users to submit IT help desk tickets. The app is built with Handlebars, Node.js, Express, and MySQL.',
-    liveSite: '',
-    githubRepo: '',
+    title: 'Will Do',
+    description: 'Task management app that works tracks users progress towards their goals. The app is built with React, Express, Node, MongoDB.',
+    liveSite: 'https://will-do-7ujl.onrender.com/',
+    githubRepo: 'https://github.com/kyleochata/Will-DO-Crush-your-goals',
     cardNumber: 'card2',
     img: 'img2'
   },
   {
-    title: 'Slide Show',
-    description: '',
+    title: 'IT Help Desk',
+    description: 'Full stack application that allows users to submit IT help desk tickets.The app is built with Handlebars, Node.js, Express, and MySQL.',
     liveSite: '',
     githubRepo: '',
     cardNumber: 'card3',
@@ -27,7 +27,7 @@ export const projectData = [
   },
   {
     title: 'Brain Balance Companion',
-    description: '',
+    description: 'This project is an application for clients of Brain Balance Achievement Centers to track their progress. The app is built with HTML, CSS, JavaScript, and RESTful APIs.',
     liveSite: '',
     githubRepo: '',
     cardNumber: 'card4',
@@ -35,7 +35,7 @@ export const projectData = [
   },
   {
     title: 'Blog Site',
-    description: '',
+    description: 'This project is a blog site that allows users to create, edit, and delete blog posts. These blog posts are linked to their profile and can be viewed by other users. The app is built with Handlebars.js, CSS, JavaScript, Express, Node.js, and MySQL.',
     liveSite: '',
     githubRepo: '',
     cardNumber: 'card5',
@@ -43,7 +43,7 @@ export const projectData = [
   },
   {
     title: 'Weather Dashboard',
-    description: '',
+    description: 'This project is a weather dashboard that allows users to search for a city and view the current weather and a 5 day forecast. The app is built with HTML, CSS, JavaScript, and RESTful APIs.',
     liveSite: '',
     githubRepo: '',
     cardNumber: 'card6',
