@@ -27,10 +27,7 @@ const ContactPage = () => {
                 </a>
               </div>
             </div>
-            <div className={style.CCContainer}>
-              <div>Phone:</div>
-              <div>1-714-917-9092</div>
-            </div>
+
             <div className={style.CLContainer}>
               <div>LinkedIn</div>
               <div>
