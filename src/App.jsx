@@ -306,48 +306,60 @@ function Skills() {
 }
 
 /* ── Projects ────────────────────────────────────────────── */
-function ProjectCard({ project }) {
+function ProjectCard({ project, index }) {
   return (
-    <article className={`project-card${project.type === 'fhir' ? ' project-card--fhir' : ''} reveal`}>
-      <div className="project-card__badge-row">
-        {project.type === 'fhir' && (
-          <span className="project-card__fhir-badge">FHIR</span>
-        )}
-        {project.placeholder && (
-          <span className="project-card__placeholder-badge">In Development</span>
-        )}
-      </div>
+    <article
+      className={`project-row${project.type === 'fhir' ? ' project-row--fhir' : ''}`}
+      style={{ '--i': index }}
+    >
+      <span className="project-row__num" aria-hidden="true">
+        {String(index + 1).padStart(2, '0')}
+      </span>
 
-      <h3 className="project-card__title">{project.title}</h3>
-      <p className="project-card__desc">{project.description}</p>
+      <div className="project-row__body">
+        <div className="project-row__top">
+          <div className="project-row__heading">
+            <h3 className="project-row__title">{project.title}</h3>
+            <div className="project-row__badges">
+              {project.type === 'fhir' && (
+                <span className="project-badge project-badge--fhir">FHIR</span>
+              )}
+              {project.placeholder && (
+                <span className="project-badge project-badge--wip">In Dev</span>
+              )}
+            </div>
+          </div>
+          <div className="project-row__links">
+            {project.githubRepo && (
+              <a
+                href={project.githubRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                GitHub ↗
+              </a>
+            )}
+            {project.liveSite && (
+              <a
+                href={project.liveSite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link project-link--live"
+              >
+                Live Site ↗
+              </a>
+            )}
+          </div>
+        </div>
 
-      <div className="project-card__tags">
-        {project.tags.map(t => (
-          <span key={t} className="skill-tag skill-tag--sm">{t}</span>
-        ))}
-      </div>
+        <div className="project-row__tags">
+          {project.tags.map(t => (
+            <span key={t} className="skill-tag skill-tag--sm">{t}</span>
+          ))}
+        </div>
 
-      <div className="project-card__links">
-        {project.githubRepo && (
-          <a
-            href={project.githubRepo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-link"
-          >
-            GitHub ↗
-          </a>
-        )}
-        {project.liveSite && (
-          <a
-            href={project.liveSite}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-link project-link--live"
-          >
-            Live Site ↗
-          </a>
-        )}
+        <p className="project-row__desc">{project.description}</p>
       </div>
     </article>
   )
@@ -380,8 +392,8 @@ function Projects() {
           ))}
         </div>
 
-        <div className="projects__grid">
-          {filtered.map(p => <ProjectCard key={p.id} project={p} />)}
+        <div className="projects__list" key={filter}>
+          {filtered.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}
         </div>
       </div>
     </section>
