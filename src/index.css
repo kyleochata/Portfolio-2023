@@ -58,6 +58,11 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
 
+/* ─── Cursor ─────────────────────────────────────────────── */
+p, h1, h2, h3, h4, h5, h6, li, blockquote, span, dt, dd, figcaption { cursor: pointer; }
+input, textarea { cursor: text; }
+select, label { cursor: default; }
+
 /* ─── Animations ─────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
