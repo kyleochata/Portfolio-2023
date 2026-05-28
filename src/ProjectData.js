@@ -1,52 +1,69 @@
-
-
 export const projectData = [
   {
+    id: 'fhir-go',
+    title: 'FHIR Resource Server',
+    description: 'FHIR R4-compliant REST API server built in Go. Handles Patient, Observation, and Encounter resources with full CRUD operations and HL7 validation.',
+    tags: ['Go', 'FHIR R4', 'HL7', 'Healthcare'],
+    featured: true,
+    liveSite: '',
+    githubRepo: 'https://github.com/kyleochata',
+    type: 'fhir',
+    placeholder: true,
+  },
+  {
+    id: 'fhir-python',
+    title: 'FHIR ETL Pipeline',
+    description: 'Python-based ETL pipeline for transforming legacy clinical data into FHIR R4 bundles. Integrates with SMART on FHIR for secure data exchange.',
+    tags: ['Python', 'FHIR R4', 'ETL', 'Healthcare'],
+    featured: true,
+    liveSite: '',
+    githubRepo: 'https://github.com/kyleochata',
+    type: 'fhir',
+    placeholder: true,
+  },
+  {
+    id: 'jate',
     title: 'Just Another Text Editor',
-    description: 'A progressive web app that allows users to create, edit, and save text files. The app is built with webpack and uses the browser\'s local storage to save files.',
+    description: 'Progressive web app for creating and saving text files. Built with webpack, leverages IndexedDB for offline persistence.',
+    tags: ['JavaScript', 'PWA', 'Webpack'],
     liveSite: 'https://warm-spire-99580-61e0bdcb56b4.herokuapp.com/',
     githubRepo: 'https://github.com/kyleochata/19-Text-Editor',
-    cardNumber: 'card1',
-    img: 'img1'
+    type: 'web',
   },
   {
+    id: 'willdo',
     title: 'Will Do',
-    description: 'Task management app that works tracks users progress towards their goals. The app is built with React, Express, Node, MongoDB.',
+    description: 'Goal-tracking task management app. Full-stack with React frontend, Express/Node backend, and MongoDB persistence.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     liveSite: 'https://will-do-7ujl.onrender.com/',
     githubRepo: 'https://github.com/kyleochata/Will-DO-Crush-your-goals',
-    cardNumber: 'card2',
-    img: 'img2'
+    type: 'web',
   },
   {
+    id: 'helpdesk',
     title: 'IT Help Desk',
-    description: 'Full stack application that allows users to submit IT help desk tickets.The app is built with Handlebars, Node.js, Express, and MySQL.',
+    description: 'Full-stack ticketing system for IT support workflows. Built with Handlebars, Node.js, Express, and MySQL.',
+    tags: ['Node.js', 'Express', 'MySQL', 'Handlebars'],
     liveSite: 'https://radiant-wave-47724-d875b64f42d0.herokuapp.com/login',
     githubRepo: 'https://github.com/kyleochata/Hammer-Help-Desk',
-    cardNumber: 'card3',
-    img: 'img3'
+    type: 'web',
   },
   {
+    id: 'brainbalance',
     title: 'Brain Balance Companion',
-    description: 'This project is an application for clients of Brain Balance Achievement Centers to track their progress. The app is built with HTML, CSS, JavaScript, and RESTful APIs.',
+    description: 'Progress tracking app for Brain Balance Achievement Centers clients. Built with vanilla JavaScript and RESTful APIs.',
+    tags: ['JavaScript', 'REST APIs', 'HTML/CSS'],
     liveSite: 'https://kyleochata.github.io/Brain_Balance_Companion/',
     githubRepo: 'https://github.com/kyleochata/Brain_Balance_Companion',
-    cardNumber: 'card4',
-    img: 'img4'
+    type: 'web',
   },
   {
-    title: 'Blog Site',
-    description: 'This project is a blog site that allows users to create, edit, and delete blog posts. These blog posts are linked to their profile and can be viewed by other users. The app is built with Handlebars.js, CSS, JavaScript, Express, Node.js, and MySQL.',
+    id: 'blog',
+    title: 'Blog Platform',
+    description: 'Multi-user blog site with post creation, editing, and deletion. Built with Handlebars.js, Express, Node.js, and MySQL.',
+    tags: ['Node.js', 'Express', 'MySQL', 'Handlebars'],
     liveSite: 'https://hidden-brook-25016-916a523caf29.herokuapp.com/',
     githubRepo: 'https://github.com/kyleochata/14-Infinite-Echoes',
-    cardNumber: 'card5',
-    img: 'img5'
-  },
-  {
-    title: 'Weather Dashboard',
-    description: 'This project is a weather dashboard that allows users to search for a city and view the current weather and a 5 day forecast. The app is built with HTML, CSS, JavaScript, and RESTful APIs.',
-    liveSite: 'https://kyleochata.github.io/06-Weather-App-Challenge-6/',
-    githubRepo: 'https://github.com/kyleochata/06-Weather-App-Challenge-6',
-    cardNumber: 'card6',
-    img: 'img6'
+    type: 'web',
   },
 ]
